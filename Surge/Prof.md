@@ -1,1 +1,1 @@
-surge & surfboard配置收录
+surge配置&规则收录
