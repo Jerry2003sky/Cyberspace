@@ -27,8 +27,8 @@ dns:
     - https://1.12.12.12/dns-query
     - https://dns.rubyfish.cn/dns-query
   fallback:
-    - https://hk.pro.xns.one/****/dns-query
-    - https://hk1.pro.xns.one/****/dns-query
+    - https://hk.pro.xns.one/***/dns-query
+    - https://hk1.pro.xns.one/***/dns-query
     - https://1.1.1.1/dns-query
     - https://public.dns.iij.jp/dns-query
     - https://dns.twnic.tw/dns-query
@@ -53,20 +53,20 @@ dns:
         - +.gvt1.com
 
 proxies:
-  - {name: 🇭🇰 Hong Kong 05, type: ss, server: ****, port: ***, cipher: ***, password: ***, udp: true, protocol: origin}
+  - {name: 🇭🇰 Hong Kong 05, type: ss, server: ac0dbfe.spoqpn.lol, port: 45304, cipher: aes-128-gcm, password: 36c475e8490f4733, udp: true, protocol: origin}
 
 latencytest: &cloudflare {enable: true, url: http://cp.cloudflare.com/generate_204, interval: 600}
 proxy-providers:
   Atom:
     type: http
-    url: ****&flag=clash
+    url: ***
     path: ./nodelist/Atom.yaml
     interval: 86400
     health-check: *cloudflare
     
   Nexitally:
     type: http
-    url: ****
+    url: ***
     path: ./nodelist/Nexitally.yaml
     interval: 86400
     health-check: *cloudflare
@@ -74,7 +74,7 @@ proxy-providers:
 
   MESL:
     type: http
-    url: ****&flag=clash
+    url: ***
     path: ./nodelist/MESL.yaml
     interval: 86400
     health-check: *cloudflare
@@ -86,8 +86,7 @@ proxy-groups:
   - name: 🔰 Proxy
     type: select
     proxies: [🇭🇰 Hong Kong, 🇺🇸 United States, 🇸🇬 Singapore, 🇯🇵 Japan, 🇬🇧 United Kingdom]
-    use: [Nexitally, MESL]
-    #use: [Nexitally, Atom, MESL]
+    use: [Nexitally, Atom, MESL]
     # filter: ^((?!🇭🇰 Hong Kong|HK|US|🇯🇵 Japan|JP|🇸🇬 Singapore|SG).)*$ # Meta only
 
  # - name: LOL
@@ -105,48 +104,37 @@ proxy-groups:
   - name: 💬 OpenAI
     type: select
     proxies: [🇯🇵 Japan, 🇺🇸 United States]
-
   - name: ✈️ Telegram
     type: select
     proxies: [🇸🇬 Singapore, 🇺🇸 United States]
-
   - name: 📹 YouTube
     type: select
     proxies: [🇭🇰 Hong Kong, 🇺🇸 United States, 🔰 Proxy]
-
   - name: 🎬 Netflix
     type: select
     proxies: [🇸🇬 Singapore, 🔰 Proxy]
-
   - name: 📺 BiliBili
     type: select
     proxies: [DIRECT, 🇭🇰 Hong Kong, 🇺🇸 United States]
-
   - name: 🎶 Spotify
     type: select
     proxies: [DIRECT, 🇭🇰 Hong Kong, 🇺🇸 United States, 🔰 Proxy]
-
   - name: 🍎 Apple
     type: select
     proxies: [DIRECT, 🇺🇸 United States]
-
   - name: 🌐 Google
     type: select
     proxies: [🇭🇰 Hong Kong, 🇺🇸 United States, 🔰 Proxy]
-    
   - name: 💻 Github
     type: select
     proxies: [🇭🇰 Hong Kong, 🇺🇸 United States]
-
   - name: Ⓜ️ Microsoft
     type: select
     proxies: [🇭🇰 Hong Kong, 🇺🇸 United States]
-  
   - name: 💳 Wise
     type: select
     proxies: [🇬🇧 United Kingdom, 🔰 Proxy]
 
-  
   - name: 🇭🇰 Hong Kong
     <<: *fallback
     proxies: [🇭🇰 HK-Select, ♻️ 🇭🇰 HK-Auto]
@@ -165,62 +153,50 @@ proxy-groups:
 
   - name: 🇭🇰 HK-Select
     type: select
-    #use: [Nexitally, Atom, MESL]
-    use: [Nexitally, MESL]
+    use: [Nexitally, Atom, MESL]
     filter: Hong Kong|HK
   - name: 🇺🇸 US-Select
     type: select
-    #use: [Nexitally, Atom, MESL]
-    use: [Nexitally, MESL]
+    use: [Nexitally, Atom, MESL]
     filter: US|United States
   - name: 🇸🇬 SG-Select
     type: select
-    #use: [Nexitally, Atom, MESL]
-    use: [Nexitally, MESL]
+    use: [Nexitally, Atom, MESL]
     filter: Singapore|SG
   - name: 🇯🇵 JP-Select
     type: select
-    #use: [Nexitally, Atom, MESL]
-    use: [Nexitally, MESL]
+    use: [Nexitally, Atom, MESL]
     filter: Japan|JP
   - name: 🇬🇧 UK-Select
     type: select
-    #use: [Nexitally, Atom, MESL]
-    use: [Nexitally, MESL]
+    use: [Nexitally, Atom, MESL]
     filter: United Kingdom|UK
 
   - name: ♻️ 🇭🇰 HK-Auto
     <<: *urltest
-    #use: [Nexitally, Atom, MESL]
-    use: [Nexitally, MESL]
+    use: [Nexitally, Atom, MESL]
     filter: Hong Kong|HK
   - name: ♻️ 🇺🇸 US-Auto
     <<: *urltest
-    #use: [Nexitally, Atom, MESL]
-    use: [Nexitally, MESL]
+    use: [Nexitally, Atom, MESL]
     filter: US|United States
   - name: ♻️ 🇸🇬 SG-Auto
     <<: *urltest
-    #use: [Nexitally, Atom, MESL]
-    use: [Nexitally, MESL]
+    use: [Nexitally, Atom, MESL]
     filter: Singapore|SG
   - name: ♻️ 🇯🇵 JP-Auto
     <<: *urltest
-    #use: [Nexitally, Atom, MESL]
-    use: [Nexitally, MESL]
+    use: [Nexitally, Atom, MESL]
     filter: Japan|JP
   - name: ♻️ 🇬🇧 UK-Auto
     <<: *urltest
-    #use: [Nexitally, Atom, MESL]
-    use: [Nexitally, MESL]
+    use: [Nexitally, Atom, MESL]
     filter: United Kingdom|UK
-
 
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
   - DOMAIN,yacd.haishan.me,DIRECT
-  
   - RULE-SET,private,DIRECT
   - RULE-SET,reject,REJECT
   - RULE-SET,BlockHttpDNS,REJECT
@@ -333,4 +309,3 @@ rule-providers:
     <<: *ipcidr
     url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/cncidr.txt
     path: ./ruleset/cncidr.yaml
-    
