@@ -57,12 +57,12 @@ proxies:
 
 latencytest: &cloudflare {enable: true, url: http://cp.cloudflare.com/generate_204, interval: 600}
 proxy-providers:
-  #Atom:
-    #type: http
-    #url: ****&flag=clash
-    #path: ./nodelist/Atom.yaml
-    #interval: 86400
-    #health-check: *cloudflare
+  Atom:
+    type: http
+    url: ****&flag=clash
+    path: ./nodelist/Atom.yaml
+    interval: 86400
+    health-check: *cloudflare
     
   Nexitally:
     type: http
