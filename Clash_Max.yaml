@@ -1,0 +1,336 @@
+mixed-port: 7890
+allow-lan: false
+mode: rule
+log-level: info
+ipv6: false
+external-controller: 127.0.0.1:9090
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: fake-ip
+  default-nameserver:
+    - 223.5.5.5
+    - 1.0.0.1
+    - 8.8.8.8
+    - 114.114.114.114
+  fake-ip-filter:
+    - '*.lan'
+    - 'localhost.ptlogin2.qq.com'
+    - dns.msftncsi.com
+    - "*.srv.nintendo.net"
+    - "*.stun.playstation.net"
+    - xbox.*.microsoft.com
+    - "*.xboxlive.com"
+  nameserver:
+    - https://dns.pub/dns-query
+    - https://223.6.6.6/dns-query
+    - https://1.12.12.12/dns-query
+    - https://dns.rubyfish.cn/dns-query
+  fallback:
+    - https://hk.pro.xns.one/****/dns-query
+    - https://hk1.pro.xns.one/****/dns-query
+    - https://1.1.1.1/dns-query
+    - https://public.dns.iij.jp/dns-query
+    - https://dns.twnic.tw/dns-query
+    - tls://8.8.4.4
+  fallback-filter:
+    geoip: true
+    geoip-code: CN
+    ipcidr:
+         - 240.0.0.0/4
+         - 0.0.0.0/32
+         - 127.0.0.1/32
+    domain:
+        - +.google.com
+        - +.cloud.cupronickel.goog
+        - +.googleapis.com
+        - +.youtube.com
+        - +.google.cn
+        - +.googleapis.cn
+        - +.facebook.com
+        - +.twitter.com
+        - +.xn--ngstr-lra8j.com
+        - +.gvt1.com
+
+proxies:
+  - {name: 🇭🇰 Hong Kong 05, type: ss, server: ****, port: ***, cipher: ***, password: ***, udp: true, protocol: origin}
+
+latencytest: &cloudflare {enable: true, url: http://cp.cloudflare.com/generate_204, interval: 600}
+proxy-providers:
+  #Atom:
+    #type: http
+    #url: ****&flag=clash
+    #path: ./nodelist/Atom.yaml
+    #interval: 86400
+    #health-check: *cloudflare
+    
+  Nexitally:
+    type: http
+    url: ****
+    path: ./nodelist/Nexitally.yaml
+    interval: 86400
+    health-check: *cloudflare
+    # filter: ^((?!Premium).)*$ # Meta only
+
+  MESL:
+    type: http
+    url: ****&flag=clash
+    path: ./nodelist/MESL.yaml
+    interval: 86400
+    health-check: *cloudflare
+
+type:
+  fallback: &fallback {type: fallback, interval: 600, url: http://cp.cloudflare.com/generate_204}
+  urltest: &urltest {type: url-test, interval: 600, url: http://cp.cloudflare.com/generate_204}
+proxy-groups:
+  - name: 🔰 Proxy
+    type: select
+    proxies: [🇭🇰 Hong Kong, 🇺🇸 United States, 🇸🇬 Singapore, 🇯🇵 Japan, 🇬🇧 United Kingdom]
+    use: [Nexitally, MESL]
+    #use: [Nexitally, Atom, MESL]
+    # filter: ^((?!🇭🇰 Hong Kong|HK|US|🇯🇵 Japan|JP|🇸🇬 Singapore|SG).)*$ # Meta only
+
+ # - name: LOL
+ #   type: select
+ #   proxies: [🇭🇰 Hong Kong 05, 🇭🇰 Hong Kong 05 Trojan, HK-AHC-10X]
+ #   use: [MESL]
+ #   filter: HK 1[5-9]
+
+ # - name: GameDownload
+ #   type: select
+ #   proxies: [Proxy]
+ #   use: [MESL]
+ #   filter: '0.1'
+
+  - name: 💬 OpenAI
+    type: select
+    proxies: [🇯🇵 Japan, 🇺🇸 United States]
+
+  - name: ✈️ Telegram
+    type: select
+    proxies: [🇸🇬 Singapore, 🇺🇸 United States]
+
+  - name: 📹 YouTube
+    type: select
+    proxies: [🇭🇰 Hong Kong, 🇺🇸 United States, 🔰 Proxy]
+
+  - name: 🎬 Netflix
+    type: select
+    proxies: [🇸🇬 Singapore, 🔰 Proxy]
+
+  - name: 📺 BiliBili
+    type: select
+    proxies: [DIRECT, 🇭🇰 Hong Kong, 🇺🇸 United States]
+
+  - name: 🎶 Spotify
+    type: select
+    proxies: [DIRECT, 🇭🇰 Hong Kong, 🇺🇸 United States, 🔰 Proxy]
+
+  - name: 🍎 Apple
+    type: select
+    proxies: [DIRECT, 🇺🇸 United States]
+
+  - name: 🌐 Google
+    type: select
+    proxies: [🇭🇰 Hong Kong, 🇺🇸 United States, 🔰 Proxy]
+    
+  - name: 💻 Github
+    type: select
+    proxies: [🇭🇰 Hong Kong, 🇺🇸 United States]
+
+  - name: Ⓜ️ Microsoft
+    type: select
+    proxies: [🇭🇰 Hong Kong, 🇺🇸 United States]
+  
+  - name: 💳 Wise
+    type: select
+    proxies: [🇬🇧 United Kingdom, 🔰 Proxy]
+
+  
+  - name: 🇭🇰 Hong Kong
+    <<: *fallback
+    proxies: [🇭🇰 HK-Select, ♻️ 🇭🇰 HK-Auto]
+  - name: 🇺🇸 United States
+    <<: *fallback
+    proxies: [🇺🇸 US-Select, ♻️ 🇺🇸 US-Auto]
+  - name: 🇸🇬 Singapore
+    <<: *fallback
+    proxies: [🇸🇬 SG-Select, ♻️ 🇸🇬 SG-Auto]
+  - name: 🇯🇵 Japan
+    <<: *fallback
+    proxies: [🇯🇵 JP-Select, ♻️ 🇯🇵 JP-Auto]
+  - name: 🇬🇧 United Kingdom
+    <<: *fallback
+    proxies: [🇬🇧 UK-Select, ♻️ 🇬🇧 UK-Auto]
+
+  - name: 🇭🇰 HK-Select
+    type: select
+    #use: [Nexitally, Atom, MESL]
+    use: [Nexitally, MESL]
+    filter: Hong Kong|HK
+  - name: 🇺🇸 US-Select
+    type: select
+    #use: [Nexitally, Atom, MESL]
+    use: [Nexitally, MESL]
+    filter: US|United States
+  - name: 🇸🇬 SG-Select
+    type: select
+    #use: [Nexitally, Atom, MESL]
+    use: [Nexitally, MESL]
+    filter: Singapore|SG
+  - name: 🇯🇵 JP-Select
+    type: select
+    #use: [Nexitally, Atom, MESL]
+    use: [Nexitally, MESL]
+    filter: Japan|JP
+  - name: 🇬🇧 UK-Select
+    type: select
+    #use: [Nexitally, Atom, MESL]
+    use: [Nexitally, MESL]
+    filter: United Kingdom|UK
+
+  - name: ♻️ 🇭🇰 HK-Auto
+    <<: *urltest
+    #use: [Nexitally, Atom, MESL]
+    use: [Nexitally, MESL]
+    filter: Hong Kong|HK
+  - name: ♻️ 🇺🇸 US-Auto
+    <<: *urltest
+    #use: [Nexitally, Atom, MESL]
+    use: [Nexitally, MESL]
+    filter: US|United States
+  - name: ♻️ 🇸🇬 SG-Auto
+    <<: *urltest
+    #use: [Nexitally, Atom, MESL]
+    use: [Nexitally, MESL]
+    filter: Singapore|SG
+  - name: ♻️ 🇯🇵 JP-Auto
+    <<: *urltest
+    #use: [Nexitally, Atom, MESL]
+    use: [Nexitally, MESL]
+    filter: Japan|JP
+  - name: ♻️ 🇬🇧 UK-Auto
+    <<: *urltest
+    #use: [Nexitally, Atom, MESL]
+    use: [Nexitally, MESL]
+    filter: United Kingdom|UK
+
+
+rules:
+  - RULE-SET,applications,DIRECT
+  - DOMAIN,clash.razord.top,DIRECT
+  - DOMAIN,yacd.haishan.me,DIRECT
+  
+  - RULE-SET,private,DIRECT
+  - RULE-SET,reject,REJECT
+  - RULE-SET,BlockHttpDNS,REJECT
+  - DOMAIN-SUFFIX,sentry.io,REJECT
+  - DOMAIN-SUFFIX,wise.com,💳 Wise
+  - DOMAIN-KEYWORD,wise,💳 Wise
+  - RULE-SET,YouTube,📹 YouTube
+  - RULE-SET,Netflix,🎬 Netflix
+  - RULE-SET,Netflix_IP,🎬 Netflix
+  - RULE-SET,Spotify,🎶 Spotify
+  - RULE-SET,Mail,🇭🇰 Hong Kong 05
+  - RULE-SET,Google,🌐 Google
+  - RULE-SET,OpenAI,💬 OpenAI
+  - RULE-SET,Github,💻 Github
+  - RULE-SET,Microsoft,Ⓜ️ Microsoft
+  - RULE-SET,BiliBili,📺 BiliBili
+  - RULE-SET,icloud,🍎 Apple
+  - RULE-SET,apple,🍎 Apple
+  - RULE-SET,proxy,🔰 Proxy
+  - RULE-SET,direct,DIRECT
+  - RULE-SET,telegramcidr,✈️ Telegram
+  - RULE-SET,cncidr,DIRECT
+  - IP-CIDR,2.2.2.2/32,DIRECT
+  - DOMAIN,www.189.cn,DIRECT
+  - MATCH,🔰 Proxy
+
+classical: &classical {type: http, behavior: classical, interval: 86400}
+domain: &domain {type: http, behavior: domain, interval: 86400}
+ipcidr: &ipcidr {type: http, behavior: ipcidr, interval: 86400}
+rule-providers:
+  Mail:
+    <<: *classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Mail/Mail_No_Resolve.yaml
+    path: ./ruleset/Mail.yaml
+  BlockHttpDNS:
+    <<: *classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/BlockHttpDNS/BlockHttpDNS_No_Resolve.yaml
+    path: ./ruleset/BlockHttpDNS.yaml
+  YouTube:
+    <<: *classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube_No_Resolve.yaml
+    path: ./ruleset/YouTube.yaml
+  Netflix:
+    <<: *classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Netflix/Netflix.yaml
+    path: ./ruleset/Netflix.yaml
+  Spotify:
+    <<: *classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Spotify/Spotify.yaml
+    path: ./ruleset/Spotify.yaml
+  Google:
+    <<: *classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google_No_Resolve.yaml
+    path: ./ruleset/Google.yaml
+  OpenAI:
+    <<: *classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI_No_Resolve.yaml
+    path: ./ruleset/OpenAI.yaml
+  BiliBili:
+    <<: *classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/BiliBili/BiliBili_No_Resolve.yaml
+    path: ./ruleset/BiliBili.yaml
+  Github:
+    <<: *classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub.yaml
+    path: ./ruleset/Github.yaml
+  Microsoft:
+    <<: *classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft_No_Resolve.yaml
+    path: ./ruleset/Microsoft.yaml
+  applications:
+    <<: *classical
+    url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/applications.txt
+    path: ./ruleset/applications.yaml
+
+  icloud:
+    <<: *domain
+    url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/icloud.txt
+    path: ./ruleset/icloud.yaml
+  apple:
+    <<: *domain
+    url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/apple.txt
+    path: ./ruleset/apple.yaml
+  reject:
+    <<: *domain
+    url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/reject.txt
+    path: ./ruleset/reject.yaml
+  proxy:
+    <<: *domain
+    url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/proxy.txt
+    path: ./ruleset/proxy.yaml
+  direct:
+    <<: *domain
+    url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt
+    path: ./ruleset/direct.yaml
+  private:
+    <<: *domain
+    url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/private.txt
+    path: ./ruleset/private.yaml
+
+  telegramcidr:
+    <<: *ipcidr
+    url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/telegramcidr.txt
+    path: ./ruleset/telegramcidr.yaml
+  Netflix_IP:
+    <<: *ipcidr
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Netflix/Netflix_IP.yaml
+    path: ./ruleset/Netflix_IP.yaml
+  cncidr:
+    <<: *ipcidr
+    url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/cncidr.txt
+    path: ./ruleset/cncidr.yaml
+    
