@@ -53,7 +53,7 @@ dns:
         - +.gvt1.com
 
 proxies:
-  - {name: 🇭🇰 Hong Kong 05, type: ss, server: ac0dbfe.spoqpn.lol, port: 45304, cipher: aes-128-gcm, password: 36c475e8490f4733, udp: true, protocol: origin}
+  - {name: 🇭🇰 Hong Kong 05, type: ss, server: ***, port: ***, cipher: ***, password: ***, udp: true, protocol: origin}
 
 latencytest: &cloudflare {enable: true, url: http://cp.cloudflare.com/generate_204, interval: 600}
 proxy-providers:
