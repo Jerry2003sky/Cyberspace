@@ -1,25 +1,44 @@
-#自用规则
+#自用AI规则
+# OpenAI 相关产品
 host, ai.cn, AI
-host, openaiapi-site.azureedge.net, AI
-host, challenges.cloudflare.com, AI
-host, api.revenuecat.com, AI
-host, cdn.oaistatic.com, AI
-host-wildcard, ocsp.r2m*.amazontrust.com, AI
 host-suffix, ai.com, AI
-host-suffix, oaistatic.com, AI
-host-suffix, oaiusercontent.com, AI
-host-suffix, livekit.cloud, AI
-host-suffix, auth0.com, AI
-host-suffix, sentry.io, AI
-host-suffix, identrust.com, AI
-host-suffix, client-api.arkoselabs.com, AI
-host-suffix, events.statsigapi.net, AI
-host-suffix, featuregates.org, AI
-host-suffix, intercom.io, AI
-host-suffix, intercomcdn.com, AI
-host-suffix, chat.openai.com.cdn.cloudflare.net, AI
 host-suffix, openai.com, AI
-host-suffix, stripe.com, AI
 host-suffix, poe.com, AI
 host-keyword, openai, AI
+host-keyword, openaicom, AI
+host-keyword, chatgpt, AI
+# OpenAI 图片优化和交互服务
+host-suffix, openaicom.imgix.net
+# 功能开关或实验性功能
+host-suffix, featuregates.org, AI
+# 支付渠道和验证
+host, api.revenuecat.com, AI
+host-suffix, stripe.com, AI
+# 人机验证
+host-suffix, client-api.arkoselabs.com, AI
+host-suffix, challenges.cloudflare.com, AI
+# IdenTrust 数字证书和安全服务
+host-suffix, identrust.com, AI
+# sentry 数据采集
+host-suffix, o33249.ingest.sentry.io, AI
+host-suffix, sentry.io, AI
+# Statsig 数据分析
+host-suffix, events.statsigapi.net, AI
+host-suffix, api.statsig.com, AI
+host-suffix, chat.openai.com.cdn.cloudflare.net, AI
+host-suffix, auth0.com, AI
+# Azure 对象储存，用于下载聊天记录
+host-suffix, openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net, AI
+host-suffix, production-openaicom-storage.azureedge.net, AI
+host-suffix, openaiapi-site.azureedge.net, AI
+# Intercom 客户沟通平台
+host-suffix, intercom.io, AI
+host-suffix, intercomcdn.com, AI
+# ChatGPT App 语音服务
+host-suffix, livekit.cloud, AI
 ip-cidr, 146.190.168.0/25, AI
+# OpenAI 静态内容和用户内容（可能是证书相关内容）
+host-suffix, oaistatic.com, AI
+host-suffix, oaiusercontent.com, AI
+# Others
+host-wildcard, ocsp.r2m*.amazontrust.com, AI
