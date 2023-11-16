@@ -1,0 +1,25 @@
+#自用规则
+host, ai.cn, AI
+host, openaiapi-site.azureedge.net, AI
+host, challenges.cloudflare.com, AI
+host, api.revenuecat.com, AI
+host, cdn.oaistatic.com, AI
+host-wildcard, ocsp.r2m*.amazontrust.com, AI
+host-suffix, ai.com, AI
+host-suffix, oaistatic.com, AI
+host-suffix, oaiusercontent.com, AI
+host-suffix, livekit.cloud, AI
+host-suffix, auth0.com, AI
+host-suffix, sentry.io, AI
+host-suffix, identrust.com, AI
+host-suffix, client-api.arkoselabs.com, AI
+host-suffix, events.statsigapi.net, AI
+host-suffix, featuregates.org, AI
+host-suffix, intercom.io, AI
+host-suffix, intercomcdn.com, AI
+host-suffix, chat.openai.com.cdn.cloudflare.net, AI
+host-suffix, openai.com, AI
+host-suffix, stripe.com, AI
+host-suffix, poe.com, AI
+host-keyword, openai, AI
+ip-cidr, 146.190.168.0/25, AI
