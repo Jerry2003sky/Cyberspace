@@ -7,8 +7,6 @@ host-suffix, poe.com, AI
 host-keyword, openai, AI
 host-keyword, openaicom, AI
 host-keyword, chatgpt, AI
-# OpenAI 图片优化和交互服务
-host-suffix, openaicom.imgix.net, AI
 # 功能开关或实验性功能
 host-suffix, featuregates.org, AI
 # 支付渠道和验证
