@@ -27,8 +27,8 @@ dns:
     - https://1.12.12.12/dns-query
     - https://dns.rubyfish.cn/dns-query
   fallback:
-    - https://hk.pro.xns.one/@jerry/dns-query
-    - https://hk1.pro.xns.one/@jerry/dns-query
+    - https://hk.pro.xns.one/****/dns-query
+    - https://hk1.pro.xns.one/****/dns-query
     - https://1.1.1.1/dns-query
     - https://public.dns.iij.jp/dns-query
     - https://dns.twnic.tw/dns-query
@@ -53,20 +53,20 @@ dns:
         - +.gvt1.com
 
 proxies:
-  - {name: 🇭🇰 Hong Kong 05, type: ss, server: ac0dbfe.spoqpn.lol, port: 45304, cipher: aes-128-gcm, password: 36c475e8490f4733, udp: true, protocol: origin}
+  - {name: 🇭🇰 Hong Kong 05, type: ss, server: ****, port: ****, cipher: aes-128-gcm, password: ****, udp: true, protocol: origin}
 
 latencytest: &cloudflare {enable: true, url: http://cp.cloudflare.com/generate_204, interval: 600}
 proxy-providers:
   Atom:
     type: http
-    url: https://gist.githubusercontent.com/Jerry2003sky/c3fd43fec9d36c26a9177b693a53096f/raw/Atom-Clash
+    url: ****
     path: ./nodelist/Atom.yaml
     interval: 86400
     health-check: *cloudflare
     
   Nexitally:
     type: http
-    url: https://kumgrb.xyz/?L2Rvd25sb2FkQ29uZmlnL0NsYXNoLmFzcHg/ZXE9d2luZG93cyZ1cms9MmVkZmE5NjctZGJmNy00NDc1LTljNjMtZDU5NTZiOGY4NGYzJm1tPTE5NjcwMyY=
+    url: ****
     path: ./nodelist/Nexitally.yaml
     interval: 86400
     health-check: *cloudflare
@@ -74,7 +74,7 @@ proxy-providers:
 
   MESL:
     type: http
-    url: https://sb.meslcloud.com/api/v1/client/subscribe?token=b2ef8984e1a7a08e568868d950502127&flag=clash
+    url: ****&flag=clash
     path: ./nodelist/MESL.yaml
     interval: 86400
     health-check: *cloudflare
@@ -86,7 +86,6 @@ proxy-groups:
   - name: 🔰 Proxy
     type: select
     proxies: [🇭🇰 Hong Kong, 🇺🇸 United States, 🇸🇬 Singapore, 🇯🇵 Japan, 🇬🇧 United Kingdom]
-    #use: [Nexitally, MESL]
     use: [Nexitally, Atom, MESL]
     # filter: ^((?!🇭🇰 Hong Kong|HK|US|🇯🇵 Japan|JP|🇸🇬 Singapore|SG).)*$ # Meta only
 
@@ -155,53 +154,43 @@ proxy-groups:
   - name: 🇭🇰 HK-Select
     type: select
     use: [Nexitally, Atom, MESL]
-    #use: [Nexitally, MESL]
     filter: Hong Kong|HK
   - name: 🇺🇸 US-Select
     type: select
     use: [Nexitally, Atom, MESL]
-    #use: [Nexitally, MESL]
     filter: US|United States
   - name: 🇸🇬 SG-Select
     type: select
     use: [Nexitally, Atom, MESL]
-    #use: [Nexitally, MESL]
     filter: Singapore|SG
   - name: 🇯🇵 JP-Select
     type: select
     use: [Nexitally, Atom, MESL]
-    #use: [Nexitally, MESL]
     filter: Japan|JP
   - name: 🇬🇧 UK-Select
     type: select
     use: [Nexitally, Atom, MESL]
-    #use: [Nexitally, MESL]
     filter: United Kingdom|UK
 
   - name: ♻️ 🇭🇰 HK-Auto
     <<: *urltest
     use: [Nexitally, Atom, MESL]
-    #use: [Nexitally, MESL]
     filter: Hong Kong|HK
   - name: ♻️ 🇺🇸 US-Auto
     <<: *urltest
     use: [Nexitally, Atom, MESL]
-    #use: [Nexitally, MESL]
     filter: US|United States
   - name: ♻️ 🇸🇬 SG-Auto
     <<: *urltest
     use: [Nexitally, Atom, MESL]
-    #use: [Nexitally, MESL]
     filter: Singapore|SG
   - name: ♻️ 🇯🇵 JP-Auto
     <<: *urltest
     use: [Nexitally, Atom, MESL]
-    #use: [Nexitally, MESL]
     filter: Japan|JP
   - name: ♻️ 🇬🇧 UK-Auto
     <<: *urltest
     use: [Nexitally, Atom, MESL]
-    #use: [Nexitally, MESL]
     filter: United Kingdom|UK
 
 rules:
