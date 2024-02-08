@@ -1,0 +1,47 @@
+<##自用AI规则##>
+### OpenAI 相关产品
+DOMAIN.cn
+DOMAIN-SUFFIX.com
+DOMAIN-SUFFIX, openai.com
+DOMAIN-SUFFIX, poe.com
+DOMAIN-KEYWORD, openai
+DOMAIN-KEYWORD, openaicom
+DOMAIN-KEYWORD, chatgpt
+# OpenAI 图片优化和交互服务
+DOMAIN-SUFFIX, openaicom.imgix.net
+# 功能开关或实验性功能
+DOMAIN-SUFFIX, featuregates.org
+# 支付渠道和验证
+DOMAIN, api.revenuecat.com
+DOMAIN-SUFFIX, stripe.com
+# 人机验证
+DOMAIN-SUFFIX, client-api.arkoselabs.com
+DOMAIN-SUFFIX, challenges.cloudflare.com
+# IdenTrust 数字证书和安全服务
+DOMAIN-SUFFIX, identrust.com
+# Sentry 数据采集
+DOMAIN, o33249.ingest.sentry.io
+DOMAIN-SUFFIX, sentry.io
+# Statsig 数据分析
+DOMAIN-SUFFIX, events.statsigapi.net
+DOMAIN-SUFFIX, api.statsig.com
+DOMAIN-SUFFIX, chat.openai.com.cdn.cloudflare.net
+DOMAIN-SUFFIX, auth0.com
+# Azure 对象储存，用于下载聊天记录
+DOMAIN-SUFFIX, openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net
+DOMAIN-SUFFIX, production-openaicom-storage.azureedge.net
+DOMAIN-SUFFIX, openaiapi-site.azureedge.net
+# Intercom 客户沟通平台
+DOMAIN-SUFFIX, intercom.io
+DOMAIN-SUFFIX, intercomcdn.com
+DOMAIN-SUFFIX, intercomassets.com
+# ChatGPT App 语音服务
+DOMAIN-SUFFIX, livekit.cloud
+ip-cidr, 146.190.168.0/25
+# OpenAI 静态内容和用户内容（可能是证书相关内容）
+DOMAIN-SUFFIX, oaistatic.com
+DOMAIN-SUFFIX, oaiusercontent.com
+
+### Perplexity
+DOMAIN-SUFFIX, perplexity.ai
+DOMAIN-KEYWORD, perplexity
