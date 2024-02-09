@@ -1,9 +1,9 @@
 #!name=网络速率
-#!desc=默认 1MB（改为8MB）
+#!desc=默认 1MB（改为4MB）
 
 [Script]
 # Panel
-network-speed-panel = type=generic,timeout=60,script-path=https://raw.githubusercontent.com/Jerry2003sky/Cyberspace/main/Surge/script/network_speed/index.js,argument=icon=arrow.down.circle&icon-color=#5d84f8&mb=8
+network-speed-panel = type=generic,timeout=60,script-path=https://raw.githubusercontent.com/Jerry2003sky/Cyberspace/main/Surge/script/network_speed/index.js,argument=icon=arrow.down.circle&icon-color=#5d84f8&mb=4
 
 [Panel]
 network-speed-panel = script-name=network-speed-panel,update-interval=-1
