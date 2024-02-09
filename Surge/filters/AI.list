@@ -1,7 +1,7 @@
 <##自用AI规则##>
 ### OpenAI 相关产品
-DOMAIN.cn
-DOMAIN-SUFFIX.com
+DOMAIN, ai.cn
+DOMAIN-SUFFIX, ai.com
 DOMAIN-SUFFIX, openai.com
 DOMAIN-SUFFIX, poe.com
 DOMAIN-KEYWORD, openai
