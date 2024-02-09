@@ -1,5 +1,5 @@
 #!name=网络速率
-#!desc=默认 1MB
+#!desc=默认 1MB（改为8MB）
 
 [Script]
 # Panel
