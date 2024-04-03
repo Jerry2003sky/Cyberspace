@@ -44,3 +44,7 @@ DOMAIN-SUFFIX,oaiusercontent.com
 ### Perplexity
 DOMAIN-SUFFIX,perplexity.ai
 DOMAIN-KEYWORD,perplexity
+### Claude
+DOMAIN,cdn.usefathom.com
+DOMAIN-SUFFIX,anthropic.com
+DOMAIN-SUFFIX,claude.ai
