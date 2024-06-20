@@ -1,11 +1,14 @@
 #自用AI规则#
 ### OpenAI 相关产品
+DOMAIN,browser-intake-datadoghq.com
+DOMAIN,static.cloudflareinsights.com
 DOMAIN,ai.cn
 DOMAIN-SUFFIX,ai.com
-DOMAIN-SUFFIX,openai.com
 DOMAIN-SUFFIX,poe.com
+DOMAIN-SUFFIX,openai.com
 DOMAIN-KEYWORD,openai
 DOMAIN-KEYWORD,openaicom
+DOMAIN-SUFFIX,chatgpt.com
 DOMAIN-KEYWORD,chatgpt
 # OpenAI 图片优化和交互服务
 DOMAIN-SUFFIX,openaicom.imgix.net
@@ -41,6 +44,14 @@ IP-CIDR,146.190.168.0/25,no-resolve
 # OpenAI 静态内容和用户内容（可能是证书相关内容）
 DOMAIN-SUFFIX,oaistatic.com
 DOMAIN-SUFFIX,oaiusercontent.com
+# 其他规则
+DOMAIN-SUFFIX,algolia.net
+DOMAIN-SUFFIX,launchdarkly.com
+DOMAIN-SUFFIX,observeit.net
+DOMAIN-SUFFIX,segment.io
+IP-CIDR,24.199.123.28/32,no-resolve
+IP-CIDR,64.23.132.171/32,no-resolve
+IP-ASN,20473,no-resolve
 ### Perplexity
 DOMAIN-SUFFIX,perplexity.ai
 DOMAIN-KEYWORD,perplexity
