@@ -1,3 +1,4 @@
+DOMAIN-SUFFIX,t-mobile.com
 DOMAIN-SUFFIX,crl.t-mobile.com
 DOMAIN-SUFFIX,eas3.msg.t-mobile.com
 DOMAIN-SUFFIX,mascns.t-mobile.com
@@ -6,6 +7,7 @@ DOMAIN-SUFFIX,epdg.epc.mnc240.mcc310.pub.3gppnetwork.org
 DOMAIN-SUFFIX,epdg.epc.mnc260.mcc310.pub.3gppnetwork.org
 DOMAIN-SUFFIX,ss.epdg.epc.mnc260.mcc310.pub.3gppnetwork.org
 DOMAIN-SUFFIX,ss.epdg.epc.geo.mnc260.mcc310.pub.3gppnetwork.org
+DOMAIN-KEYWORD,t-mobile
 IP-CIDR,66.94.0.0/19,no-resolve
 IP-CIDR,206.29.177.36/32,no-resolve
 IP-CIDR,208.54.0.0/16,no-resolve
