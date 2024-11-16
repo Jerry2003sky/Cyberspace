@@ -1,50 +1,59 @@
 #自用AI规则#
-### OpenAI 相关产品
+### OpenAI规则
+PROCESS-NAME,/Applications/Firefox.app/Contents/MacOS/firefox
+PROCESS-NAME,firefox.exe 
+# OpenAI 相关产品
 DOMAIN,browser-intake-datadoghq.com
 DOMAIN,static.cloudflareinsights.com
-DOMAIN,ai.cn
 DOMAIN-SUFFIX,ai.com
 DOMAIN-SUFFIX,poe.com
-DOMAIN-SUFFIX,openai.com
+DOMAIN-SUFFIX,psc2.cf2.poecdn.net
 DOMAIN-KEYWORD,openai
 DOMAIN-KEYWORD,openaicom
-DOMAIN-SUFFIX,chatgpt.com
 DOMAIN-KEYWORD,chatgpt
+DOMAIN-SUFFIX,openai.com
+DOMAIN-SUFFIX,chatgpt.com
 # OpenAI 图片优化和交互服务
 DOMAIN-SUFFIX,openaicom.imgix.net
 # 功能开关或实验性功能
 DOMAIN-SUFFIX,featuregates.org
 # 支付渠道和验证
-DOMAIN,api.revenuecat.com
 DOMAIN-SUFFIX,stripe.com
+DOMAIN,api.revenuecat.com
+# 上面这一条可能会误伤 👆🏻
 # 人机验证
 DOMAIN-SUFFIX,client-api.arkoselabs.com
 DOMAIN-SUFFIX,challenges.cloudflare.com
+# 上面这一条可能会误伤 👆🏻
 # IdenTrust 数字证书和安全服务
 DOMAIN-SUFFIX,identrust.com
 # Sentry 数据采集
 DOMAIN,o33249.ingest.sentry.io
-DOMAIN-SUFFIX,sentry.io
 # Statsig 数据分析
 DOMAIN-SUFFIX,events.statsigapi.net
 DOMAIN-SUFFIX,api.statsig.com
+# CDN
 DOMAIN-SUFFIX,chat.openai.com.cdn.cloudflare.net
 DOMAIN-SUFFIX,auth0.com
 # Azure 对象储存，用于下载聊天记录
+DOMAIN-SUFFIX,openaicomproductionae4b.blob.core.windows.net
+# Azure 的 CDN
 DOMAIN-SUFFIX,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net
 DOMAIN-SUFFIX,production-openaicom-storage.azureedge.net
 DOMAIN-SUFFIX,openaiapi-site.azureedge.net
 # Intercom 客户沟通平台
 DOMAIN-SUFFIX,intercom.io
 DOMAIN-SUFFIX,intercomcdn.com
-DOMAIN-SUFFIX,intercomassets.com
+# 上面这一条可能会误伤 👆🏻
 # ChatGPT App 语音服务
 DOMAIN-SUFFIX,livekit.cloud
 IP-CIDR,146.190.168.0/25,no-resolve
+IP-CIDR,129.146.161.173/32,no-resolve
 # OpenAI 静态内容和用户内容（可能是证书相关内容）
 DOMAIN-SUFFIX,oaistatic.com
 DOMAIN-SUFFIX,oaiusercontent.com
 # 其他规则
+DOMAIN,browser-intake-datadoghq.com
 DOMAIN-SUFFIX,algolia.net
 DOMAIN-SUFFIX,launchdarkly.com
 DOMAIN-SUFFIX,observeit.net
@@ -52,14 +61,19 @@ DOMAIN-SUFFIX,segment.io
 IP-CIDR,24.199.123.28/32,no-resolve
 IP-CIDR,64.23.132.171/32,no-resolve
 IP-ASN,20473,no-resolve
+
 ### Perplexity
 //DOMAIN-SUFFIX,perplexity.ai
 //DOMAIN-SUFFIX,pplx.ai
 //DOMAIN-KEYWORD,perplexity
 //DOMAIN-KEYWORD,pplx
+
 ### Claude
 DOMAIN,cdn.usefathom.com
 DOMAIN-SUFFIX,anthropic.com
 DOMAIN-SUFFIX,claude.ai
+IP-CIDR,160.79.104.0/23,no-resolve
+IP-CIDR6,2607:6bc0::/48,no-resolve
+
 ### xAI
 DOMAIN-SUFFIX,x.ai
