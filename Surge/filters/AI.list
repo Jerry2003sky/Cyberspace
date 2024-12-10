@@ -13,6 +13,9 @@ DOMAIN-KEYWORD,openaicom
 DOMAIN-KEYWORD,chatgpt
 DOMAIN-SUFFIX,openai.com
 DOMAIN-SUFFIX,chatgpt.com
+# Sora
+DOMAIN-SUFFIX,sora.com
+DOMAIN-KEYWORD,sora
 # OpenAI 图片优化和交互服务
 DOMAIN-SUFFIX,openaicom.imgix.net
 # 功能开关或实验性功能
