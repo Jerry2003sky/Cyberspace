@@ -1,7 +1,5 @@
 #自用AI规则#
 ### OpenAI规则
-PROCESS-NAME,/Applications/Firefox.app/Contents/MacOS/firefox
-PROCESS-NAME,firefox.exe 
 # OpenAI 相关产品
 DOMAIN,browser-intake-datadoghq.com
 DOMAIN,static.cloudflareinsights.com
