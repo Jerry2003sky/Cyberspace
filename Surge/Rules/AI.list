@@ -80,3 +80,8 @@ IP-CIDR6,2607:6bc0::/48,no-resolve
 DOMAIN-SUFFIX,x.ai
 DOMAIN-SUFFIX,grok.com
 DOMAIN-KEYWORD,grok
+
+### Groq
+DOMAIN-SUFFIX,groq.com
+DOMAIN-KEYWORD,groq
+
