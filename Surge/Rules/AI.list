@@ -29,7 +29,7 @@ DOMAIN-SUFFIX,challenges.cloudflare.com
 # IdenTrust 数字证书和安全服务
 DOMAIN-SUFFIX,identrust.com
 # Sentry 数据采集
-DOMAIN,o33249.ingest.sentry.io
+DOMAIN,o33249.ingest.us.sentry.io
 # Statsig 数据分析
 DOMAIN-SUFFIX,events.statsigapi.net
 DOMAIN-SUFFIX,api.statsig.com
