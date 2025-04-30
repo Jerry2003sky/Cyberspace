@@ -88,3 +88,7 @@ DOMAIN-KEYWORD,groq
 ### Inceptionlabs
 DOMAIN-SUFFIX,inceptionlabs.ai
 DOMAIN-KEYWORD,inceptionlabs
+
+### Raycast
+DOMAIN-SUFFIX,raycast.com
+DOMAIN-KEYWORD,raycast
