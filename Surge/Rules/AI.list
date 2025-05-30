@@ -99,3 +99,4 @@ DOMAIN-SUFFIX,t3.chat
 ### Hyperbolic
 DOMAIN-SUFFIX,hyperbolic.xyz
 DOMAIN-KEYWORD,hyperbolic
+IP-CIDR,34.221.27.144/32
