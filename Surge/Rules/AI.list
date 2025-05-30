@@ -95,3 +95,7 @@ DOMAIN-KEYWORD,raycast
 
 ### T3 Chat
 DOMAIN-SUFFIX,t3.chat
+
+### Hyperbolic
+DOMAIN-SUFFIX,hyperbolic.xyz
+DOMAIN-KEYWORD,hyperbolic
