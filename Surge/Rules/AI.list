@@ -98,8 +98,11 @@ DOMAIN-SUFFIX,t3.chat
 
 ### Dia
 DOMAIN-SUFFIX,diabrowser.com
+DOMAIN-SUFFIX,arc.net
+DOMAIN-SUFFIX,thebrowser.company
 DOMAIN-KEYWORD,diabrowser
-### Hyperbolic
+DOMAIN-KEYWORD,thebrowser
 
+### Hyperbolic
 DOMAIN-SUFFIX,hyperbolic.xyz
 DOMAIN-KEYWORD,hyperbolic
