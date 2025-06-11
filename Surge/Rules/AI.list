@@ -100,6 +100,6 @@ DOMAIN-SUFFIX,t3.chat
 DOMAIN-SUFFIX,diabrowser.com
 DOMAIN-KEYWORD,diabrowser
 ### Hyperbolic
+
 DOMAIN-SUFFIX,hyperbolic.xyz
 DOMAIN-KEYWORD,hyperbolic
-IP-CIDR,34.221.27.144/32
