@@ -96,6 +96,9 @@ DOMAIN-KEYWORD,raycast
 ### T3 Chat
 DOMAIN-SUFFIX,t3.chat
 
+### Dia
+DOMAIN-SUFFIX,diabrowser.com
+DOMAIN-KEYWORD,diabrowser
 ### Hyperbolic
 DOMAIN-SUFFIX,hyperbolic.xyz
 DOMAIN-KEYWORD,hyperbolic
