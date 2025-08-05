@@ -131,6 +131,11 @@ DOMAIN-SUFFIX,thebrowser.company
 DOMAIN-KEYWORD,diabrowser
 DOMAIN-KEYWORD,thebrowser
 
+### Cerebras
+DOMAIN-SUFFIX,cerebras.ai
+DOMAIN-KEYWORD,cerebras
+
 ### Hyperbolic
 DOMAIN-SUFFIX,hyperbolic.xyz
 DOMAIN-KEYWORD,hyperbolic
+
