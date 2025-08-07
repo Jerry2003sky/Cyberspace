@@ -139,3 +139,6 @@ DOMAIN-KEYWORD,cerebras
 DOMAIN-SUFFIX,hyperbolic.xyz
 DOMAIN-KEYWORD,hyperbolic
 
+### OpenRouter
+DOMAIN-SUFFIX,openrouter.ai
+DOMAIN-KEYWORD,openrouter
