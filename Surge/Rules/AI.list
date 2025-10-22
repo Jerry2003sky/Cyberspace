@@ -87,8 +87,8 @@ DOMAIN-SUFFIX,gemini.google.com
 DOMAIN-SUFFIX,generativeai.google
 DOMAIN-SUFFIX,apis.google.com
 DOMAIN-SUFFIX,aistudio.google.com
-DOMAIN-KEYWORD,colab
-DOMAIN-KEYWORD,developerprofiles
+# DOMAIN-KEYWORD,colab
+# DOMAIN-KEYWORD,developerprofiles
 DOMAIN-KEYWORD,generativelanguage
 DOMAIN,generativelanguage.googleapis.com // Gemini
 # Gemini 结束 🔶🔶🔶
@@ -143,5 +143,6 @@ DOMAIN-KEYWORD,hyperbolic
 ### OpenRouter
 DOMAIN-SUFFIX,openrouter.ai
 DOMAIN-KEYWORD,openrouter
+
 
 
