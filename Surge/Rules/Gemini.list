@@ -1,0 +1,19 @@
+# Gemini需与Google的ip保持一致，不然会被判定为机器人，故把Gemini从AI组中拿出
+# Gemini 开始 🔶🔶🔶 基于 BM7，这里就是全部的 13 条
+DOMAIN,alkalimakersuite-pa.clients6.google.com
+DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com
+# 👆🏻 这两条很重要，如果这两条的规则匹配不上，或者 IP 不一致，就会弹不支持的国家
+DOMAIN,ai.google.dev
+DOMAIN,makersuite.google.com
+DOMAIN-SUFFIX,bard.google.com
+DOMAIN-SUFFIX,deepmind.com
+DOMAIN-SUFFIX,deepmind.google
+DOMAIN-SUFFIX,gemini.google.com
+DOMAIN-SUFFIX,generativeai.google
+DOMAIN-SUFFIX,apis.google.com
+DOMAIN-SUFFIX,aistudio.google.com
+# DOMAIN-KEYWORD,colab
+# DOMAIN-KEYWORD,developerprofiles
+DOMAIN-KEYWORD,generativelanguage
+DOMAIN,generativelanguage.googleapis.com // Gemini
+# Gemini 结束 🔶🔶🔶
