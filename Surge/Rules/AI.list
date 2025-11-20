@@ -74,25 +74,6 @@ IP-CIDR,146.190.168.0/25,no-resolve
 IP-CIDR,129.146.161.173/32,no-resolve
 # OpenAI 结束 🔶🔶🔶
 
-# Gemini 开始 🔶🔶🔶 基于 BM7，这里就是全部的 13 条
-DOMAIN,alkalimakersuite-pa.clients6.google.com
-DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com
-# 👆🏻 这两条很重要，如果这两条的规则匹配不上，或者 IP 不一致，就会弹不支持的国家
-DOMAIN,ai.google.dev
-DOMAIN,makersuite.google.com
-DOMAIN-SUFFIX,bard.google.com
-DOMAIN-SUFFIX,deepmind.com
-DOMAIN-SUFFIX,deepmind.google
-DOMAIN-SUFFIX,gemini.google.com
-DOMAIN-SUFFIX,generativeai.google
-DOMAIN-SUFFIX,apis.google.com
-DOMAIN-SUFFIX,aistudio.google.com
-# DOMAIN-KEYWORD,colab
-# DOMAIN-KEYWORD,developerprofiles
-DOMAIN-KEYWORD,generativelanguage
-DOMAIN,generativelanguage.googleapis.com // Gemini
-# Gemini 结束 🔶🔶🔶
-
 # 其它
 DOMAIN-SUFFIX,poe.com
 DOMAIN-SUFFIX,psc2.cf2.poecdn.net
@@ -141,6 +122,7 @@ DOMAIN-KEYWORD,hyperbolic
 ### OpenRouter
 DOMAIN-SUFFIX,openrouter.ai
 DOMAIN-KEYWORD,openrouter
+
 
 
 
