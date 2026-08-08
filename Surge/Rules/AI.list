@@ -1,6 +1,6 @@
 #自用AI规则#
 # Anthropic 开始 🔶🔶🔶
-DOMAIN-SUFFIX,siftscience.com,REJECT
+# DOMAIN-SUFFIX,siftscience.com,REJECT  //建议直接单独加入配置
 # Sift 是一家专注于在线欺诈检测与预防的公司，利用机器学习技术帮助企业识别和阻止各种欺诈行为，如支付欺诈、账户接管、内容滥用等
 # 👆🏻 这个是 Claude App 检测欺诈的，直接拒了就可以了。bl7 的规则集里面这个域名全部在广告里面
 PROCESS-NAME,"/Applications/Claude.app/Contents/Frameworks/Claude Helper.app/Contents/MacOS/Claude Helper"
