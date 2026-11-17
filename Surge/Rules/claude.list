@@ -5,7 +5,7 @@
 DEST-PORT,123
 
 # Desktop
-PROCESS-NAME,/Users/cat/.local/share/claude/*
-PROCESS-NAME,/Users/cat/Applications/Claude Code URL
-PROCESS-NAME,/Users/cat/Library/Application Support/Claude/*
+PROCESS-NAME,/Users/jerry2003sky/.local/share/claude/*
+PROCESS-NAME,/Users/jerry2003sky/Applications/Claude Code URL
+PROCESS-NAME,/Users/jerry2003sky/Library/Application Support/Claude/*
 PROCESS-NAME,/Applications/Claude.app/
