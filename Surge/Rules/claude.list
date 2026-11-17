@@ -1,0 +1,11 @@
+# Claude Priority - Surge 原生规则，不参与转换
+# 使用时单独订阅本文件，并由引用配置指定策略。
+
+# 时区检测
+DEST-PORT,123
+
+# Desktop
+PROCESS-NAME,/Users/cat/.local/share/claude/*
+PROCESS-NAME,/Users/cat/Applications/Claude Code URL
+PROCESS-NAME,/Users/cat/Library/Application Support/Claude/*
+PROCESS-NAME,/Applications/Claude.app/
