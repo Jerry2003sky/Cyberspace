@@ -5,7 +5,7 @@
 DEST-PORT,123
 
 # 入站IP
-IP-CIDR, 153.61.224.0/22
+IP-CIDR,153.61.224.0/22,no-resolve
 
 # Desktop
 #PROCESS-NAME,/Users/jerry2003sky/.local/share/claude/*
